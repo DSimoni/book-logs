@@ -9,7 +9,7 @@
 
         public DateTime PublishDate { get; set; }
 
-        public List<string> Authors { get; set; }
+        public ICollection<Author> Authors { get; set; }
 
 
     }
