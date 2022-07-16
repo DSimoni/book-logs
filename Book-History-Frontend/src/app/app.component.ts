@@ -10,7 +10,7 @@ export class AppComponent {
   public forecasts?: WeatherForecast[];
 
   constructor(http: HttpClient) {
-    http.get<WeatherForecast[]>('/weatherforecast').subscribe(result => {
+    http.get<any[]>('/book').subscribe(result => {
       this.forecasts = result;
     }, error => console.error(error));
   }
