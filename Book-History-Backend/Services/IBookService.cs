@@ -6,10 +6,10 @@ namespace Book_History_Backend.Services
     {
         void AddBook(Book book);
         void DeleteBook(int id);
-        Book GetBook();
+        Book GetBook(int id);
         IList<Book> GetBooks();
         IList<Book> OrderBooks();
-        IList<Book> SearchBooks();
+        IList<Book> SearchBooks(string title);
         void UpdateBook(int id, Book book);
     }
 }

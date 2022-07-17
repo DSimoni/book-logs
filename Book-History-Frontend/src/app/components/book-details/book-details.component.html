@@ -1,0 +1,60 @@
+<div style="width: 400px; margin: auto;">
+    <div *ngIf="currentBook" class="edit-form">
+      <h4>Book</h4>
+      <form>
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input
+            type="text"
+            class="form-control"
+            id="title"
+            [(ngModel)]="currentBook.title"
+            name="title"
+          />
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input
+            type="text"
+            class="form-control"
+            id="description"
+            [(ngModel)]="currentBook.description"
+            name="description"
+          />
+        </div>
+        <div class="form-group">
+          <label><strong>Status:</strong></label>
+          {{ currentBook.publishDate ? "publishDate" : "Pending" }}
+        </div>
+      </form>
+      <button
+        class="badge badge-primary mr-2"
+        *ngIf="currentBook.publishDate"
+        (click)="updatepublishDate(false)"
+      >
+        UnPublish
+      </button>
+      <button
+        *ngIf="!currentBook.publishDate"
+        class="badge badge-primary mr-2"
+        (click)="updatepublishDate(true)"
+      >
+        Publish
+      </button>
+      <button class="badge badge-danger mr-2" (click)="deleteBook()">
+        Delete
+      </button>
+      <button
+        type="submit"
+        class="badge badge-success"
+        (click)="updateBook()"
+      >
+        Update
+      </button>
+      <p>{{ message }}</p>
+    </div>
+    <div *ngIf="!currentBook">
+      <br />
+      <p>Cannot access this Book...</p>
+    </div>
+  </div>

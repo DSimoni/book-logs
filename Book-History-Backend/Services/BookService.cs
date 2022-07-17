@@ -22,29 +22,45 @@ namespace Book_History_Backend.Services
             return _applicationDbContext.Books.ToList();
         }
 
-        public IList<Book> SearchBooks()
+        public IList<Book> SearchBooks(string title)
         {
-            return _applicationDbContext.Books.ToList();
+            return _applicationDbContext.Books.Where(x => x.Title.Contains(title)).ToList();
         }
 
 
-
-        public Book GetBook()
+        public Book? GetBook(int id)
         {
-            return new Book();
+            return _applicationDbContext.Books.FirstOrDefault(x => x.Id == id);
         }
 
 
         public void AddBook(Book book)
         {
+            _applicationDbContext.Books.Add(book);
+            _applicationDbContext.SaveChanges();
         }
 
         public void UpdateBook(int id, Book book)
         {
+            Book? foundBook = _applicationDbContext.Books.FirstOrDefault(x => x.Id == id);
+
+            if (foundBook != null)
+            {
+                foundBook.Title = book.Title;
+                _applicationDbContext.SaveChanges();
+            }
         }
 
         public void DeleteBook(int id)
         {
+            Book? foundBook = _applicationDbContext.Books.FirstOrDefault(x => x.Id == id);
+
+            if (foundBook != null)
+            {
+                _applicationDbContext.Books.Remove(foundBook);
+                _applicationDbContext.SaveChanges();
+            }
+
         }
     }
 }
