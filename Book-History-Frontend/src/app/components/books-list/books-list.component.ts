@@ -42,17 +42,7 @@ export class BooksListComponent implements OnInit {
     this.currentBook = book;
     this.currentIndex = index;
   }
-  removeAllbooks(): void {
-    this.bookService.deleteAll()
-      .subscribe(
-        response => {
-          console.log(response);
-          this.retrievebooks();
-        },
-        error => {
-          console.log(error);
-        });
-  }
+
   searchTitle(): void {
     this.bookService.findByTitle(this.title)
       .subscribe(

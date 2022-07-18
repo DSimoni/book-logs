@@ -22,11 +22,16 @@
             name="description"
           />
         </div>
+        
         <div class="form-group">
           <label><strong>Status:</strong></label>
-          {{ currentBook.publishDate ? "publishDate" : "Pending" }}
+          {{ currentBook.publishDate ? currentBook.publishDate : "Pending" }}
         </div>
       </form>
+      <ng-multiselect-dropdown [placeholder]="'Select Authors'" [settings]="dropdownSettings"
+      [data]="dropdownList" [(ngModel)]="selectedItems" (onSelect)="onItemSelect($event)"
+      (onSelectAll)="onSelectAll($event)" (onDeSelect)="onItemDeSelect($event)">
+    </ng-multiselect-dropdown>
       <button
         class="badge badge-primary mr-2"
         *ngIf="currentBook.publishDate"

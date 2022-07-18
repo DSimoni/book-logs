@@ -1,32 +1,29 @@
 <div style="width: 400px; margin: auto;">
-    <div class="submit-form">
-      <div *ngIf="!submitted">
-        <div class="form-group">
-          <label for="title">Title</label>
-          <input
-            type="text"
-            class="form-control"
-            id="title"
-            required
-            [(ngModel)]="book.title"
-            name="title"
-          />
-        </div>
-        <div class="form-group">
-          <label for="description">Description</label>
-          <input
-            class="form-control"
-            id="description"
-            required
-            [(ngModel)]="book.description"
-            name="description"
-          />
-        </div>
-        <button (click)="savebook()" class="btn btn-success">Submit</button>
+  <div class="submit-form">
+    <div *ngIf="!submitted">
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" class="form-control" id="title" required [(ngModel)]="book.title" name="title" />
       </div>
-      <div *ngIf="submitted">
-        <h4>You submitted successfully!</h4>
-        <button class="btn btn-success" (click)="newbook()">Add</button>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input class="form-control" id="description" required [(ngModel)]="book.description" name="description" />
       </div>
+
+      <div class="form-group">
+
+        <ng-multiselect-dropdown [placeholder]="'Select Authors'" [settings]="dropdownSettings"
+          [data]="dropdownList" [(ngModel)]="selectedItems" (onSelect)="onItemSelect($event)"
+          (onSelectAll)="onSelectAll($event)">
+        </ng-multiselect-dropdown>
+      </div>
+
+
+      <button (click)="savebook()" class="btn btn-success">Submit</button>
+    </div>
+    <div *ngIf="submitted">
+      <h4>You submitted successfully!</h4>
+      <button class="btn btn-success" (click)="newbook()">Add</button>
     </div>
   </div>
+</div>

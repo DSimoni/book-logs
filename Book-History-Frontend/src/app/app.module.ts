@@ -7,6 +7,7 @@ import { AddBookComponent } from './components/add-book/add-book.component';
 import { BookDetailsComponent } from './components/book-details/book-details.component';
 import { BooksListComponent } from './components/books-list/books-list.component';
 import { AppRoutingModule } from './app-routing.module';
+import { NgMultiSelectDropDownModule } from "ng-multiselect-dropdown";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AppRoutingModule } from './app-routing.module';
     BooksListComponent
   ],
   imports: [
-    BrowserModule, FormsModule, HttpClientModule, AppRoutingModule 
+    BrowserModule, FormsModule, HttpClientModule, AppRoutingModule,
+    NgMultiSelectDropDownModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

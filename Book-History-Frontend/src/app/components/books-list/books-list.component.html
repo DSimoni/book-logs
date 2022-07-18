@@ -30,9 +30,6 @@
           {{ book.title }}
         </li>
       </ul>
-      <button class="m-3 btn btn-sm btn-danger" (click)="removeAllbooks()">
-        Remove All
-      </button>
     </div>
     <div class="col-md-6">
       <div *ngIf="currentBook">
@@ -45,8 +42,8 @@
           {{ currentBook.description }}
         </div>
         <div>
-          <label><strong>Status:</strong></label>
-          {{ currentBook.publishDate ? "publishDate" : "Pending" }}
+          <label><strong>Publish Date:</strong></label>
+          {{ currentBook.publishDate ? currentBook.publishDate : "Pending" }}
         </div>
         <a class="badge badge-warning" routerLink="/book/{{ currentBook.id }}">
           Edit

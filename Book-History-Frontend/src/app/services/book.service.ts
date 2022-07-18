@@ -26,9 +26,6 @@ export class BookService {
   delete(id: number): Observable<any> {
     return this.http.delete(`${baseUrl}/${id}`);
   }
-  deleteAll(): Observable<any> {
-    return this.http.delete(baseUrl);
-  }
   findByTitle(title: string): Observable<any> {
     return this.http.get(`/search?title=${title}`);
   }

@@ -1,6 +1,6 @@
 ﻿using Book_History_Backend.Data.Models;
+using Book_History_Backend.Service_Model;
 using Book_History_Backend.Services;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Book_History_Backend.Controllers
@@ -16,7 +16,6 @@ namespace Book_History_Backend.Controllers
         }
 
         [HttpGet]
-        //[Route("books")]
         public async Task<IActionResult> Index()
         {
             return Ok(_bookService.GetBooks());
@@ -31,7 +30,7 @@ namespace Book_History_Backend.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> Add([FromBody] Book book)
+        public async Task<IActionResult> Add([FromBody] Bookdto book)
         {
             _bookService.AddBook(book);
             return Ok();
@@ -39,7 +38,7 @@ namespace Book_History_Backend.Controllers
 
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Edit(int id, Book book)
+        public async Task<IActionResult> Edit(int id, Bookdto book)
         {
             _bookService.UpdateBook(id, book);
             return Ok();
