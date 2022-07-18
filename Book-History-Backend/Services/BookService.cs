@@ -7,10 +7,13 @@ namespace Book_History_Backend.Services
     public class BookService : IBookService
     {
         private readonly ApplicationDbContext _applicationDbContext;
+        private readonly ILogger _logger;
 
-        public BookService(ApplicationDbContext applicationDbContext)
+
+        public BookService(ApplicationDbContext applicationDbContext, ILogger<BookService> logger)
         {
             _applicationDbContext = applicationDbContext;
+            _logger = logger;
         }
 
         public IList<Book> GetBooks()
@@ -97,10 +100,14 @@ namespace Book_History_Backend.Services
                 }
                 _applicationDbContext.SaveChanges();
 
+                _logger.LogInformation($"The book {book.Title} added with description {book.Description} and published date {book.PublishDate}",
+              DateTime.UtcNow.ToLongTimeString());
+
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                _logger.LogError($"Error adding ${ex.Message} The book {book.Title} added with description {book.Description} and published date {book.PublishDate}",
+                  DateTime.UtcNow.ToLongTimeString());
             }
         }
 
@@ -126,10 +133,16 @@ namespace Book_History_Backend.Services
                 }
 
 
+                _logger.LogInformation($"The book with title {foundBook.Title} updated to {book.Title}",
+                DateTime.UtcNow.ToLongTimeString());
+
                 foundBook.Title = book.Title;
                 foundBook.Description = book.Description;
 
                 _applicationDbContext.SaveChanges();
+
+
+
             }
         }
 
