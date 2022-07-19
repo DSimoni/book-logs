@@ -38,6 +38,19 @@ export class BooksListComponent implements OnInit {
     this.currentBook = {} as IBook;
     this.currentIndex = -1;
   }
+
+  orderBooks(): void {
+    this.bookService.getOrderAll()
+    .subscribe(
+      data => { 
+        this.books = data;
+        console.log(data);
+      },
+      error => {
+        console.log(error);
+      });
+  }
+
   setActivebook(book: any, index: number): void {
     this.currentBook = book;
     this.currentIndex = index;

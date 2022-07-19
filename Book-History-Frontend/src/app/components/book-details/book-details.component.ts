@@ -57,7 +57,7 @@ export class BookDetailsComponent implements OnInit {
 
         this.dropdownList = tmp;
 
-        this.getBook(this.route.snapshot.paramMap.get('id'));
+        this.getBook(this.route.snapshot.paramMap.get('detail'));
 
         console.log(this.dropdownList);
       },
@@ -89,25 +89,6 @@ export class BookDetailsComponent implements OnInit {
         });
   }
 
-  updatepublishDate(status: any): void {
-
-    const data = {
-      title: this.currentBook.title,
-      description: this.currentBook.description,
-      publishDate: this.currentBook.publishDate,
-      authors: this.currentAuthors
-    };
-
-    this.bookService.update(this.currentBook.id, data)
-      .subscribe(
-        response => {
-          this.currentBook.publishDate = status;
-          console.log(response);
-        },
-        error => {
-          console.log(error);
-        });
-  }
   updateBook(): void {
 
     this.currentBook.authors = this.currentAuthors;
@@ -122,6 +103,7 @@ export class BookDetailsComponent implements OnInit {
           console.log(error);
         });
   }
+
   deleteBook(): void {
     this.bookService.delete(this.currentBook.id)
       .subscribe(
@@ -148,8 +130,8 @@ export class BookDetailsComponent implements OnInit {
   }
 
 
-  
-  initAuthor() {  
+
+  initAuthor() {
     let tmpAuthors: IAuthor[] = [];
 
     this.selectedItems.forEach(

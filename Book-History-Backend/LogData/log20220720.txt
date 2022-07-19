@@ -1,0 +1,180 @@
+2022-07-20 00:00:31.975 +02:00 [INF] The book with id: 1017 has Babia i pasur babi i varfer ,description test and published date 19/07/2022 23:59:48
+2022-07-20 00:00:35.034 +02:00 [INF] The book with id: 1017 has Babia i pasur babi i varfer ,description test and published date 19/07/2022 23:59:48
+2022-07-20 00:00:42.230 +02:00 [INF] The books loaded
+2022-07-20 00:00:45.717 +02:00 [INF] The authors loaded
+2022-07-20 00:00:45.736 +02:00 [INF] The book with id: 1017 has Babia i pasur babi i varfer ,description test and published date 19/07/2022 23:59:48
+2022-07-20 00:02:55.596 +02:00 [INF] The book with id: 1017 has Babia i pasur babi i varfer ,description test and published date 19/07/2022 23:59:48
+2022-07-20 00:02:57.262 +02:00 [INF] The book with id: 1017 has Babia i pasur babi i varfer ,description test and published date 19/07/2022 23:59:48
+2022-07-20 00:03:03.280 +02:00 [INF] The books loaded
+2022-07-20 00:03:05.127 +02:00 [INF] The authors loaded
+2022-07-20 00:03:05.152 +02:00 [INF] The book with id: 1017 has Babia i pasur babi i varfer ,description test and published date 19/07/2022 23:59:48
+2022-07-20 00:10:18.963 +02:00 [INF] The book with id: 1017 has Babia i pasur babi i varfer ,description test and published date 19/07/2022 23:59:48
+2022-07-20 00:10:22.869 +02:00 [INF] The book with id: 1017 has Babia i pasur babi i varfer ,description test and published date 19/07/2022 23:59:48
+2022-07-20 00:10:27.537 +02:00 [INF] The books loaded
+2022-07-20 00:10:30.209 +02:00 [INF] The authors loaded
+2022-07-20 00:10:30.230 +02:00 [INF] The book with id: 1017 has Babia i pasur babi i varfer ,description test and published date 19/07/2022 23:59:48
+2022-07-20 00:11:55.746 +02:00 [INF] The book with id: 1017 has Babia i pasur babi i varfer ,description test and published date 19/07/2022 23:59:48
+2022-07-20 00:11:59.522 +02:00 [INF] The book with id: 1017 has Babia i pasur babi i varfer ,description test and published date 19/07/2022 23:59:48
+2022-07-20 00:12:03.559 +02:00 [INF] The books loaded
+2022-07-20 00:12:05.854 +02:00 [INF] The authors loaded
+2022-07-20 00:12:05.880 +02:00 [INF] The book with id: 1017 has Babia i pasur babi i varfer ,description test and published date 19/07/2022 23:59:48
+2022-07-20 00:13:50.049 +02:00 [INF] The book with id: 1017 has Babia i pasur babi i varfer ,description test and published date 19/07/2022 23:59:48
+2022-07-20 00:13:56.507 +02:00 [INF] The book with id: 1017 has Babia i pasur babi i varfer ,description test and published date 19/07/2022 23:59:48
+2022-07-20 00:14:08.629 +02:00 [INF] The books loaded
+2022-07-20 00:14:10.977 +02:00 [INF] The authors loaded
+2022-07-20 00:14:10.991 +02:00 [INF] The book with id: 1017 has Babia i pasur babi i varfer ,description test and published date 19/07/2022 23:59:48
+2022-07-20 00:16:22.443 +02:00 [INF] The book with id: 1017 has Babia i pasur babi i varfer ,description test and published date 19/07/2022 23:59:48
+2022-07-20 00:19:51.579 +02:00 [INF] The books loaded
+2022-07-20 00:19:57.286 +02:00 [INF] The authors loaded
+2022-07-20 00:19:57.318 +02:00 [INF] The book with id: 1017 has Babia i pasur babi i varfer ,description test and published date 19/07/2022 23:59:48
+2022-07-20 00:20:04.466 +02:00 [INF] The books loaded
+2022-07-20 00:20:05.608 +02:00 [INF] The authors loaded
+2022-07-20 00:20:07.285 +02:00 [INF] The books loaded
+2022-07-20 00:20:09.262 +02:00 [INF] The authors loaded
+2022-07-20 00:20:09.603 +02:00 [INF] The book with id: 1017 has Babia i pasur babi i varfer ,description test and published date 19/07/2022 23:59:48
+2022-07-20 00:20:19.268 +02:00 [INF] The authors loaded
+2022-07-20 00:20:19.799 +02:00 [INF] The books loaded
+2022-07-20 00:20:32.490 +02:00 [INF] The book with id: sd was searched
+2022-07-20 00:20:34.936 +02:00 [INF] The authors loaded
+2022-07-20 00:20:35.210 +02:00 [INF] The books loaded
+2022-07-20 00:20:35.972 +02:00 [INF] The authors loaded
+2022-07-20 00:20:36.721 +02:00 [INF] The books loaded
+2022-07-20 00:20:38.578 +02:00 [INF] The authors loaded
+2022-07-20 00:20:38.913 +02:00 [INF] The book with id: 1017 has Babia i pasur babi i varfer ,description test and published date 19/07/2022 23:59:48
+2022-07-20 00:20:42.464 +02:00 [INF] The book with title Babia i pasur babi i varfer updated to Babia i pasur babi i varfer
+2022-07-20 00:20:48.417 +02:00 [INF] The books loaded
+2022-07-20 00:20:52.869 +02:00 [INF] The authors loaded
+2022-07-20 00:20:53.210 +02:00 [INF] The book with id: 1017 has Babia i pasur babi i varfer ,description test 1 and published date 19/07/2022 23:59:48
+2022-07-20 00:20:56.929 +02:00 [INF] The book with title Babia i pasur babi i varfer updated to Babia i pasur babi i varfer
+2022-07-20 00:20:59.626 +02:00 [INF] The books loaded
+2022-07-20 00:21:06.113 +02:00 [INF] The books were sorted
+2022-07-20 00:21:27.980 +02:00 [INF] The authors loaded
+2022-07-20 00:21:28.018 +02:00 [INF] The book with id: 1017 has Babia i pasur babi i varfer ,description test 4 and published date 19/07/2022 23:59:48
+2022-07-20 00:21:40.691 +02:00 [INF] The book with title Babia i pasur babi i varfer updated to Babia i pasur babi i varfer
+2022-07-20 00:22:34.803 +02:00 [INF] The books loaded
+2022-07-20 00:22:38.189 +02:00 [INF] The authors loaded
+2022-07-20 00:22:42.425 +02:00 [INF] The books loaded
+2022-07-20 00:22:44.927 +02:00 [INF] The authors loaded
+2022-07-20 00:22:44.949 +02:00 [INF] The book with id: 1017 has Babia i pasur babi i varfer ,description test 4 and published date 19/07/2022 23:59:48
+2022-07-20 00:25:02.105 +02:00 [INF] The book with id: 1017 has Babia i pasur babi i varfer ,description test 4 and published date 19/07/2022 23:59:48
+2022-07-20 00:25:09.454 +02:00 [INF] The book with id: 1017 has Babia i pasur babi i varfer ,description test 4 and published date 19/07/2022 23:59:48
+2022-07-20 00:25:12.666 +02:00 [INF] The books loaded
+2022-07-20 00:25:17.496 +02:00 [INF] The books loaded
+2022-07-20 00:25:19.555 +02:00 [INF] The authors loaded
+2022-07-20 00:25:19.577 +02:00 [INF] The book with id: 1017 has Babia i pasur babi i varfer ,description test 4 and published date 19/07/2022 23:59:48
+2022-07-20 00:26:58.722 +02:00 [INF] The book with id: 1017 has Babia i pasur babi i varfer ,description test 4 and published date 19/07/2022 23:59:48
+2022-07-20 00:27:00.681 +02:00 [INF] The book with id: 1017 has Babia i pasur babi i varfer ,description test 4 and published date 19/07/2022 23:59:48
+2022-07-20 00:27:02.484 +02:00 [INF] The books loaded
+2022-07-20 00:27:06.283 +02:00 [INF] The books loaded
+2022-07-20 00:27:08.582 +02:00 [INF] The authors loaded
+2022-07-20 00:27:08.605 +02:00 [INF] The book with id: 1017 has Babia i pasur babi i varfer ,description test 4 and published date 19/07/2022 23:59:48
+2022-07-20 00:27:11.765 +02:00 [INF] The books loaded
+2022-07-20 00:27:16.453 +02:00 [INF] The books were sorted
+2022-07-20 00:27:18.709 +02:00 [INF] The authors loaded
+2022-07-20 00:30:41.474 +02:00 [INF] The books loaded
+2022-07-20 00:32:14.315 +02:00 [INF] The books loaded
+2022-07-20 00:32:19.983 +02:00 [INF] The books loaded
+2022-07-20 00:32:25.290 +02:00 [INF] The books loaded
+2022-07-20 00:32:28.089 +02:00 [INF] The authors loaded
+2022-07-20 00:32:52.667 +02:00 [INF] The books loaded
+2022-07-20 00:33:05.558 +02:00 [INF] The books loaded
+2022-07-20 00:33:08.083 +02:00 [INF] The authors loaded
+2022-07-20 00:33:29.608 +02:00 [INF] The books loaded
+2022-07-20 00:33:31.747 +02:00 [INF] The authors loaded
+2022-07-20 00:35:18.087 +02:00 [INF] The books loaded
+2022-07-20 00:35:19.609 +02:00 [INF] The authors loaded
+2022-07-20 00:35:35.830 +02:00 [INF] The books loaded
+2022-07-20 00:35:37.993 +02:00 [INF] The authors loaded
+2022-07-20 00:36:27.769 +02:00 [INF] The books loaded
+2022-07-20 00:36:29.453 +02:00 [INF] The authors loaded
+2022-07-20 00:37:08.994 +02:00 [INF] The books loaded
+2022-07-20 00:37:10.103 +02:00 [INF] The authors loaded
+2022-07-20 00:39:18.243 +02:00 [INF] The books loaded
+2022-07-20 00:39:19.235 +02:00 [INF] The authors loaded
+2022-07-20 00:40:28.034 +02:00 [INF] The books loaded
+2022-07-20 00:40:41.548 +02:00 [INF] The authors loaded
+2022-07-20 00:40:52.099 +02:00 [INF] The book Test added with description Finished work and published date 20/07/2022 00:40:52
+2022-07-20 00:45:10.092 +02:00 [INF] The books loaded
+2022-07-20 00:45:13.970 +02:00 [INF] The authors loaded
+2022-07-20 00:45:20.634 +02:00 [INF] The book sdf V added with description  dsFD and published date 20/07/2022 00:45:20
+2022-07-20 00:47:41.178 +02:00 [INF] The books loaded
+2022-07-20 00:47:43.865 +02:00 [INF] The authors loaded
+2022-07-20 00:47:43.892 +02:00 [INF] The book with id: 1018 has Test ,description Finished work and published date 20/07/2022 00:40:52
+2022-07-20 00:47:51.755 +02:00 [INF] The authors loaded
+2022-07-20 00:48:03.855 +02:00 [INF] The book rttr added with description rtr and published date 20/07/2022 00:48:03
+2022-07-20 00:48:24.906 +02:00 [INF] The books loaded
+2022-07-20 00:48:27.499 +02:00 [INF] The authors loaded
+2022-07-20 00:48:27.518 +02:00 [INF] The book with id: 1018 has Test ,description Finished work and published date 20/07/2022 00:40:52
+2022-07-20 00:48:31.724 +02:00 [INF] The authors loaded
+2022-07-20 00:49:09.568 +02:00 [INF] The books loaded
+2022-07-20 00:49:10.728 +02:00 [INF] The authors loaded
+2022-07-20 00:49:34.382 +02:00 [INF] The books loaded
+2022-07-20 00:49:36.612 +02:00 [INF] The authors loaded
+2022-07-20 00:49:36.637 +02:00 [INF] The book with id: 1018 has Test ,description Finished work and published date 20/07/2022 00:40:52
+2022-07-20 00:49:39.171 +02:00 [INF] The authors loaded
+2022-07-20 00:49:45.686 +02:00 [INF] The book fb  added with description  fdzg  and published date 20/07/2022 00:49:45
+2022-07-20 00:50:29.479 +02:00 [INF] The books loaded
+2022-07-20 00:50:32.017 +02:00 [INF] The authors loaded
+2022-07-20 00:50:37.575 +02:00 [INF] The book x bdggd added with description  zdgf and published date 20/07/2022 00:50:37
+2022-07-20 00:50:48.945 +02:00 [INF] The books loaded
+2022-07-20 00:51:54.994 +02:00 [INF] The authors loaded
+2022-07-20 00:51:55.021 +02:00 [INF] The book with id: 1020 has rttr ,description rtr and published date 20/07/2022 00:48:03
+2022-07-20 00:52:00.451 +02:00 [INF] The books loaded
+2022-07-20 00:52:04.407 +02:00 [INF] The authors loaded
+2022-07-20 00:52:04.757 +02:00 [INF] The book with id: 1022 has x bdggd ,description  zdgf and published date 20/07/2022 00:50:37
+2022-07-20 00:52:05.893 +02:00 [INF] The book with title x bdggd updated to x bdggd
+2022-07-20 00:52:12.220 +02:00 [INF] The book with title x bdggd updated to x bdggd
+2022-07-20 00:56:46.699 +02:00 [INF] The book with id: 1022 has x bdggd ,description  zdgf and published date 20/07/2022 00:50:37
+2022-07-20 00:56:49.467 +02:00 [INF] The book with id: 1022 has x bdggd ,description  zdgf and published date 20/07/2022 00:50:37
+2022-07-20 00:56:53.265 +02:00 [INF] The books loaded
+2022-07-20 00:56:55.539 +02:00 [INF] The authors loaded
+2022-07-20 00:56:55.560 +02:00 [INF] The book with id: 1018 has Test ,description Finished work and published date 20/07/2022 00:40:52
+2022-07-20 00:57:06.312 +02:00 [INF] The book with title Test updated to Test
+2022-07-20 00:57:20.821 +02:00 [INF] The books loaded
+2022-07-20 00:57:34.206 +02:00 [INF] The books were sorted
+2022-07-20 00:57:37.223 +02:00 [INF] The books were sorted
+2022-07-20 00:57:37.980 +02:00 [INF] The books were sorted
+2022-07-20 00:57:38.609 +02:00 [INF] The books were sorted
+2022-07-20 00:57:38.850 +02:00 [INF] The books were sorted
+2022-07-20 00:57:38.984 +02:00 [INF] The books were sorted
+2022-07-20 00:57:48.006 +02:00 [INF] The authors loaded
+2022-07-20 00:57:48.883 +02:00 [INF] The books loaded
+2022-07-20 00:57:59.453 +02:00 [INF] The books were sorted
+2022-07-20 00:58:23.902 +02:00 [INF] The authors loaded
+2022-07-20 00:58:24.289 +02:00 [INF] The books loaded
+2022-07-20 00:58:32.869 +02:00 [INF] The authors loaded
+2022-07-20 00:58:42.916 +02:00 [INF] The book ANA added with description READR and published date 20/07/2022 00:58:42
+2022-07-20 00:58:45.472 +02:00 [INF] The books loaded
+2022-07-20 00:58:49.676 +02:00 [INF] The books were sorted
+2022-07-20 00:59:10.269 +02:00 [INF] The book with id: TES was searched
+2022-07-20 01:00:07.273 +02:00 [INF] The authors loaded
+2022-07-20 01:00:07.301 +02:00 [INF] The book with id: 1018 has Test ,description Finished work and published date 20/07/2022 00:40:52
+2022-07-20 01:00:20.584 +02:00 [INF] The book with title Test updated to Test56347
+2022-07-20 01:00:27.750 +02:00 [INF] The books loaded
+2022-07-20 01:00:30.494 +02:00 [INF] The books loaded
+2022-07-20 01:00:35.905 +02:00 [INF] The authors loaded
+2022-07-20 01:00:36.136 +02:00 [INF] The book with id: 1018 has Test56347 ,description Finished work and published date 20/07/2022 00:40:52
+2022-07-20 01:00:38.039 +02:00 [INF] The books loaded
+2022-07-20 01:00:42.963 +02:00 [INF] The authors loaded
+2022-07-20 01:00:49.433 +02:00 [INF] The book  AVERE  added with description DS SD  and published date 20/07/2022 01:00:49
+2022-07-20 01:00:50.872 +02:00 [INF] The books loaded
+2022-07-20 01:00:56.251 +02:00 [INF] The authors loaded
+2022-07-20 01:00:56.517 +02:00 [INF] The book with id: 1022 has x bdggd ,description  zdgf and published date 20/07/2022 00:50:37
+2022-07-20 01:01:01.846 +02:00 [INF] The books loaded
+2022-07-20 01:03:04.612 +02:00 [INF] The books loaded
+2022-07-20 01:03:10.176 +02:00 [INF] The books loaded
+2022-07-20 01:03:25.889 +02:00 [INF] The books loaded
+2022-07-20 01:03:43.131 +02:00 [INF] The books loaded
+2022-07-20 01:04:31.124 +02:00 [INF] The books loaded
+2022-07-20 01:04:34.307 +02:00 [INF] The books loaded
+2022-07-20 01:04:36.951 +02:00 [INF] The books loaded
+2022-07-20 01:05:10.347 +02:00 [INF] The books loaded
+2022-07-20 01:05:16.091 +02:00 [INF] The books loaded
+2022-07-20 01:05:55.684 +02:00 [INF] The books loaded
+2022-07-20 01:05:57.149 +02:00 [INF] The books loaded
+2022-07-20 01:05:59.619 +02:00 [INF] The books loaded
+2022-07-20 01:06:03.274 +02:00 [INF] The authors loaded
+2022-07-20 01:06:03.295 +02:00 [INF] The book with id: 1019 has sdf V ,description  dsFD and published date 20/07/2022 00:45:20
+2022-07-20 01:06:05.506 +02:00 [INF] The book with title sdf V updated to sdf V
+2022-07-20 01:06:06.861 +02:00 [INF] The books loaded
+2022-07-20 01:06:08.856 +02:00 [INF] The authors loaded

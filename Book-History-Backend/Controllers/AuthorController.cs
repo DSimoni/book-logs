@@ -16,7 +16,7 @@ namespace Book_History_Backend.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
             return Ok(_authorService.GetAuthors());
         }

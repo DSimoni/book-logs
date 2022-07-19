@@ -6,8 +6,8 @@ import { AddBookComponent } from './components/add-book/add-book.component';
 const routes: Routes = [
   { path: '', redirectTo: 'book', pathMatch: 'full' },
   { path: 'book', component: BooksListComponent },
-  { path: 'book/:id', component: BookDetailsComponent },
-  { path: 'add', component: AddBookComponent }
+  { path: 'book/:detail', component: BookDetailsComponent },
+  { path: 'add-new', component: AddBookComponent }
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

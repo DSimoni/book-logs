@@ -9,13 +9,22 @@
         />
         <div class="input-group-append">
           <button
-            class="btn btn-outline-secondary"
+            class="btn btn-success"
             type="button"
             (click)="searchTitle()"
           >
             Search
           </button>
         </div>
+
+        
+        <button
+        type="submit"
+        class="btn btn-primary "
+        (click)="orderBooks()"
+      >
+        Order By Title
+      </button>
       </div>
     </div>
     <div class="col-md-6">
@@ -33,7 +42,7 @@
     </div>
     <div class="col-md-6">
       <div *ngIf="currentBook">
-        <h4>book</h4>
+        <h4>Details</h4>
         <div>
           <label><strong>Title:</strong></label> {{ currentBook.title }}
         </div>
@@ -43,11 +52,11 @@
         </div>
         <div>
           <label><strong>Publish Date:</strong></label>
-          {{ currentBook.publishDate ? currentBook.publishDate : "Pending" }}
+           {{ currentBook.publishDate | date:'fullDate'}}
         </div>
-        <a class="badge badge-warning" routerLink="/book/{{ currentBook.id }}">
+        <button class="btn btn-warning mt-2" routerLink="/book/{{ currentBook.id }}">
           Edit
-        </a>
+        </button>
       </div>
       <div *ngIf="!currentBook">
         <br />
@@ -55,3 +64,9 @@
       </div>
     </div>
   </div>
+
+  <style>
+    .btn-primary{
+        margin-left: 10px !important;
+    }
+  </style>

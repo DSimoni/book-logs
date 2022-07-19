@@ -14,6 +14,9 @@ export class BookService {
   getAll(): Observable<any> {
     return this.http.get(baseUrl);
   }
+  getOrderAll(): Observable<any> {
+    return this.http.get('/order');
+  }
   get(id: number): Observable<any> {
     return this.http.get(`${baseUrl}/${id}`);
   }

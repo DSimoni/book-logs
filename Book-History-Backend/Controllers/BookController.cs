@@ -16,21 +16,21 @@ namespace Book_History_Backend.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
             return Ok(_bookService.GetBooks());
         }
 
         [HttpGet("{id}")]
 
-        public async Task<IActionResult> Book(int id)
+        public IActionResult Book(int id)
         {
             return Ok(_bookService.GetBook(id));
         }
 
 
         [HttpPost]
-        public async Task<IActionResult> Add([FromBody] Bookdto book)
+        public IActionResult Add([FromBody] Bookdto book)
         {
             _bookService.AddBook(book);
             return Ok();
@@ -38,7 +38,7 @@ namespace Book_History_Backend.Controllers
 
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Edit(int id, Bookdto book)
+        public IActionResult Edit(int id, Bookdto book)
         {
             _bookService.UpdateBook(id, book);
             return Ok();
@@ -46,14 +46,20 @@ namespace Book_History_Backend.Controllers
 
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int id)
+        public IActionResult Delete(int id)
         {
             _bookService.DeleteBook(id);
             return Ok();
         }
 
+        [HttpGet("/order")]
+        public IActionResult Book()
+        {
+            return Ok(_bookService.OrderBooks());
+        }
+
         [HttpGet("/search")]
-        public async Task<IActionResult> Book([FromQuery(Name = "title")] string title)
+        public IActionResult Book([FromQuery(Name = "title")] string title)
         {
             return Ok(_bookService.SearchBooks(title));
         }

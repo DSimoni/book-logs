@@ -74,7 +74,6 @@ export class AddBookComponent implements OnInit {
     };
 
 
-
     this.bookService.create(data).subscribe(
       (response) => {
         console.log(response);
