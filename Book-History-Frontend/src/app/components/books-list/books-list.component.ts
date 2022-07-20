@@ -5,51 +5,51 @@ import { BookService } from 'src/app/services/book.service';
 @Component({
   selector: 'app-books-list',
   templateUrl: './books-list.component.html',
-  styleUrls: ['./books-list.component.css']
+  styleUrls: ['./books-list.component.css'],
 })
 export class BooksListComponent implements OnInit {
-
-
   books: any;
-  currentBook: IBook | undefined;
+  currentBook: IBook = {} as IBook;
   currentIndex = -1;
   title = '';
 
-  
+  constructor(private bookService: BookService) {}
 
-
-  constructor(private bookService: BookService) { }
   ngOnInit(): void {
     this.retrievebooks();
   }
-  retrievebooks(): void { 
-    this.bookService.getAll()
-      .subscribe(
-        data => { 
-          this.books = data;
-          console.log(data);
-        },
-        error => {
-          console.log(error);
-        });
+
+  retrievebooks(): void {
+    this.bookService.getAll().subscribe(
+      (data) => {
+        this.books = data;
+        console.log(data);
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   }
+
+  orderBooks(): void {
+    this.bookService.getOrderAll().subscribe(
+      (data) => {
+        this.books = data;
+        console.log(data);
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  }
+  
   refreshList(): void {
     this.retrievebooks();
     this.currentBook = {} as IBook;
     this.currentIndex = -1;
   }
 
-  orderBooks(): void {
-    this.bookService.getOrderAll()
-    .subscribe(
-      data => { 
-        this.books = data;
-        console.log(data);
-      },
-      error => {
-        console.log(error);
-      });
-  }
+
 
   setActivebook(book: any, index: number): void {
     this.currentBook = book;
@@ -57,15 +57,14 @@ export class BooksListComponent implements OnInit {
   }
 
   searchTitle(): void {
-    this.bookService.findByTitle(this.title)
-      .subscribe(
-        data => {
-          this.books = data;
-          console.log(data);
-        },
-        error => {
-          console.log(error);
-        });
+    this.bookService.findByTitle(this.title).subscribe(
+      (data) => {
+        this.books = data;
+        console.log(data);
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   }
 }
-

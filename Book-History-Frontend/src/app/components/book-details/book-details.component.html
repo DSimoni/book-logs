@@ -1,61 +1,66 @@
 <div style="width: 400px; margin: auto;">
     <div *ngIf="currentBook" class="edit-form">
       <h4>Details </h4>
-      <form>
-        <div class="form-group mb-2 mt-2">
-          <label for="title">Title</label>
-          <input
-            type="text"
-            class="form-control"
-            id="title"
-            [(ngModel)]="currentBook.title"
-            name="title"
-          />
-        </div>
-        <div class="form-group mb-2 mt-2">
-          <label for="description">Description</label>
-          <input
-            type="text"
-            class="form-control"
-            id="description"
-            [(ngModel)]="currentBook.description"
-            name="description"
-          />
-        </div>
-        
-        <div class="form-group mb-2 mt-2" >
-          <label><strong>Published Date:</strong></label>
-          {{ currentBook.publishDate | date:'fullDate'}}
-        </div>
-      </form>
-      <div class="mt-2 mb-2">
-        <ng-multiselect-dropdown [placeholder]="'Select Authors'" [settings]="dropdownSettings" class= "mb-2 mt-2"
-        [data]="dropdownList" [(ngModel)]="selectedItems" (onSelect)="onItemSelect($event)"
-        (onSelectAll)="onSelectAll($event)" (onDeSelect)="onItemDeSelect($event)">
-      </ng-multiselect-dropdown>
-      </div>
-  
-      <button class="btn btn-danger  mt-2 mb-2" (click)="deleteBook()">
-        Delete
-      </button>
-      <button
-        type="submit"
-        class= "btn btn-success  mt-2 mb-2"
-        (click)="updateBook()"
-      >
-        Update
-      </button>
+         <form [formGroup]="bookForm">
+           <div class="form-group mb-2 mt-2">
+                <label for="title">Title</label>
+                <input type="text" class="form-control"  
+                  formControlName="title"  
+                  id="title" [(ngModel)]="currentBook.title"
+                  name="title" /> 
+                  <span *ngIf="bookForm.get('title')?.errors"
+                  class="error">
+                  Title is required.
+                </span> 
+           </div>
 
+           <div class="form-group mb-2 mt-2">
+                <label for="description">Description</label>
+                <textarea 
+                type="text"
+                class="form-control"
+                formControlName="description"  
+                id="description"
+                [(ngModel)]="currentBook.description"  maxlength="100" 
+                name="description"
+                ></textarea>
+                
+               <span *ngIf="bookForm.get('description')?.errors" class="mb-2 error">
+                Description is required and set max 100 characters
+               </span>
+           </div>
+           
+            <div class="form-group mb-2 mt-2" >
+                 <label><strong>Published Date:</strong></label>
+                 {{ currentBook.publishDate | date:'fullDate'}}
+               </div>
+            <div class="mt-2 mb-2">
+                 <ng-multiselect-dropdown [placeholder]="'Select Authors'" [settings]="dropdownSettings" class= "mb-2 mt-2"
+                 [data]="dropdownList" [(ngModel)]="selectedItems" (onSelect)="onItemSelect($event)" formControlName="authors" 
+                 (onSelectAll)="onSelectAll($event)" (onDeSelect)="onItemDeSelect($event)">
+            </ng-multiselect-dropdown>
+               <span *ngIf="bookForm.get('authors')?.errors" class="mb-2 error">
+                 Authors is required.
+               </span> <br>
+            </div>
+  
+              
+            <button class="btn btn-danger  mt-2 mb-2" (click)="deleteBook()">
+              Delete
+            </button>
+            <button
+              type="submit"
+              class= "btn btn-success  mt-2 mb-2"
+              [disabled]="!bookForm.valid"
+              (click)="updateBook()"
+            >
+              Update
+            </button>
+         </form>
       <p>{{ message }}</p>
     </div>
-    <div *ngIf="!currentBook">
-      <br />
-      <p>Cannot access this Book...</p>
-    </div>
+   <div *ngIf="!currentBook">
+     <br />
+     <p>Cannot access this Book...</p>
+   </div>
   </div>
-
-  <style>
-  .btn-success{
-    margin-left: 10px !important;
-  }
-  </style>

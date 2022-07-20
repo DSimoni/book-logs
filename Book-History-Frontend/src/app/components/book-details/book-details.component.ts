@@ -5,31 +5,41 @@ import { IAuthor } from 'src/app/interface/IAuthor';
 import { BookService } from 'src/app/services/book.service';
 import { IDropdownSettings } from 'ng-multiselect-dropdown';
 import { AuthorService } from 'src/app/services/author.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-book-details',
   templateUrl: './book-details.component.html',
-  styleUrls: ['./book-details.component.css']
+  styleUrls: ['./book-details.component.css'],
 })
 export class BookDetailsComponent implements OnInit {
-
   currentBook = {} as IBook;
   currentAuthors: IAuthor[] = [];
 
   message = '';
 
-
   dropdownList: any = [];
   selectedItems: any = [];
   dropdownSettings: IDropdownSettings = {};
 
+  bookForm: FormGroup = new FormGroup({});
+
   constructor(
     private bookService: BookService,
     private authorService: AuthorService,
+    private formBuilder: FormBuilder,
     private route: ActivatedRoute,
-    private router: Router) { }
+    private router: Router
+  ) {}
+
   ngOnInit(): void {
     this.message = '';
+
+    this.bookForm = this.formBuilder.group({
+      title: ['', Validators.required],
+      description: ['', Validators.required],
+      authors: ['', Validators.required],
+    });
 
     this.retrieveauthors();
 
@@ -49,11 +59,9 @@ export class BookDetailsComponent implements OnInit {
 
     this.authorService.getAll().subscribe(
       (authors) => {
-        authors.forEach(
-          (author: { authorId: string; authorName: string }) => {
-            tmp.push({ item_id: author.authorId, item_text: author.authorName });
-          }
-        );
+        authors.forEach((author: { authorId: string; authorName: string }) => {
+          tmp.push({ item_id: author.authorId, item_text: author.authorName });
+        });
 
         this.dropdownList = tmp;
 
@@ -70,52 +78,62 @@ export class BookDetailsComponent implements OnInit {
   getBook(id: any): void {
     let tmp: { item_id: string; item_text: string }[] = [];
 
-    this.bookService.get(id)
-      .subscribe(
-        data => {
-          this.currentBook = data;
+    this.bookService.get(id).subscribe(
+      (data) => {
+        this.currentBook = data;
 
-          data.authors.forEach(
-            (book: any) => {
-              tmp.push({ item_id: book.authorId, item_text: book.authorName });
-            }
-          );
-
-          this.selectedItems = tmp;
-          this.initAuthor();
-        },
-        error => {
-          console.log(error);
+        data.authors.forEach((book: any) => {
+          tmp.push({ item_id: book.authorId, item_text: book.authorName });
         });
+
+        this.selectedItems = tmp;
+        this.initAuthor();
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   }
 
   updateBook(): void {
-
     this.currentBook.authors = this.currentAuthors;
 
-    this.bookService.update(this.currentBook.id, this.currentBook)
-      .subscribe(
-        response => {
-          console.log(response);
-          this.message = 'The book was updated successfully!';
-        },
-        error => {
-          console.log(error);
-        });
+    this.bookService.update(this.currentBook.id, this.currentBook).subscribe(
+      (response) => {
+        console.log(response);
+        this.message = 'The book was updated successfully!';
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   }
 
   deleteBook(): void {
-    this.bookService.delete(this.currentBook.id)
-      .subscribe(
-        response => {
-          console.log(response);
-          this.router.navigate(['/book']);
-        },
-        error => {
-          console.log(error);
-        });
+    this.bookService.delete(this.currentBook.id).subscribe(
+      (response) => {
+        console.log(response);
+        this.router.navigate(['/book']);
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   }
 
+  initAuthor() {
+    let tmpAuthors: IAuthor[] = [];
+
+    this.selectedItems.forEach((author: any) => {
+      tmpAuthors.push({
+        authorId: author.item_id,
+        authorName: author.item_text,
+      });
+    });
+
+    this.currentAuthors = tmpAuthors;
+  }
+  
   onItemSelect(item: any) {
     this.initAuthor();
     console.log(item);
@@ -130,17 +148,4 @@ export class BookDetailsComponent implements OnInit {
   }
 
 
-
-  initAuthor() {
-    let tmpAuthors: IAuthor[] = [];
-
-    this.selectedItems.forEach(
-      (author: any) => {
-        tmpAuthors.push({ authorId: author.item_id, authorName: author.item_text })
-      }
-    );
-
-    this.currentAuthors = tmpAuthors;
-
-  }
 }

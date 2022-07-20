@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { IDropdownSettings } from 'ng-multiselect-dropdown';
 import { IBook } from 'src/app/interface/IBook';
 import { AuthorService } from 'src/app/services/author.service';
@@ -17,11 +18,21 @@ export class AddBookComponent implements OnInit {
   selectedItems: any = [];
   dropdownSettings: IDropdownSettings = {};
 
+  bookForm: FormGroup  = new FormGroup({});
+
   constructor(
     private bookService: BookService,
-    private authorService: AuthorService
+    private authorService: AuthorService,
+    private formBuilder: FormBuilder
   ) { }
   ngOnInit(): void {
+
+    this.bookForm = this.formBuilder.group({
+      title: ['', Validators.required],
+      description: ['', Validators.required],
+      authors: ['', Validators.required]
+    });
+    
     this.retrieveauthors();
 
     this.dropdownSettings = {

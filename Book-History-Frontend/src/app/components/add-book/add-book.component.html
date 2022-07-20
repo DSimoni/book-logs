@@ -1,35 +1,43 @@
 <div style="width: 400px; margin: auto;">
   <div class="submit-form">
     <div *ngIf="!submitted">
-      <div class="form-group mt-2 mb-2">
-        <label for="title"  class="mb-1">Title</label>
-        <input type="text" class="form-control" id="title" required [(ngModel)]="book.title" name="title" />
-      </div>
-      <div class="form-group mt-2 mb-4">
-        <label for="description" class="mb-1">Description</label>
-        <input class="form-control" id="description" required [(ngModel)]="book.description" name="description" />
-      </div>
+      <form [formGroup]="bookForm"
+         (ngSubmit)="savebook()" class="form-group mt-2 mb-2">
+            <label for="title"  class="mb-1">Title</label>
+            <input type="text" class="form-control" id="title" formControlName="title"   required minlength="4"
+             [(ngModel)]="book.title" name="title" /> 
+     
+             <span *ngIf="bookForm.get('title')?.errors" class="error">
+                Title is required.
+              </span> <br>
+    
+            <label for="description" class="mb-1">Description</label>
+            <textarea class="form-control mt-2 mb-2" id="description" required formControlName="description"   [(ngModel)]="book.description" name="description" maxlength="100" >   
+             </textarea>
 
-      <div class="form-group mt-2 mb-4">
-      
-          <ng-multiselect-dropdown [placeholder]="'Select Authors'" [settings]="dropdownSettings"
-          [data]="dropdownList" [(ngModel)]="selectedItems" (onSelect)="onItemSelect($event)"
-          (onSelectAll)="onSelectAll($event)">
-        </ng-multiselect-dropdown>
-       
+            <span *ngIf="bookForm.get('description')?.errors" class="mb-2 error">
+                Description is required and set max 100 characters
+            </span>  
 
-        
-      </div>
+            <ng-multiselect-dropdown [placeholder]="'Select Authors'" [settings]="dropdownSettings" class="mb-2 mt-2"
+            [data]="dropdownList" [(ngModel)]="selectedItems" (onSelect)="onItemSelect($event)" formControlName="authors" 
+            (onSelectAll)="onSelectAll($event)">  
 
+            </ng-multiselect-dropdown>  
 
-      <button (click)="savebook()" class="btn btn-primary">Submit</button>
+          <span *ngIf="bookForm.get('authors')?.errors" class="mb-2 error">
+            Authors is required.
+          </span> <br>
+            <button type="submit" [disabled]="!bookForm.valid" class="btn btn-primary mt-2 mb-2">Submit</button>
+        </form>     
     </div>
-    <div *ngIf="submitted">
-      <h4>You submitted successfully!</h4>
-      <button class="btn btn-success" (click)="newbook()">Add</button>
-      <button class="btn btn-success"    style="margin-left:10px;"
-      routerLink="/">Home</button>
+    
+      <div *ngIf="submitted">
+        <h4>You submitted successfully!</h4>
+        <button class="btn btn-success" (click)="newbook()">Add</button>
+        <button class="btn btn-success"    style="margin-left:10px;"
+        routerLink="/">Home</button>
 
-    </div>
+      </div>
   </div>
 </div>
