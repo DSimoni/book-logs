@@ -22,6 +22,7 @@
 
   <ItemGroup>
     <Folder Include="LogData\" />
+    <Folder Include="Migrations\" />
   </ItemGroup>
 
 </Project>

@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Book_History_Backend.Migrations
 {
-    public partial class ConfigureSchemaManytoMany : Migration
+    public partial class FirstSchema : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -30,17 +30,11 @@ namespace Book_History_Backend.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    PublishDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    AuthorId = table.Column<int>(type: "int", nullable: true)
+                    PublishDate = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Books", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Books_Authors_AuthorId",
-                        column: x => x.AuthorId,
-                        principalTable: "Authors",
-                        principalColumn: "AuthorId");
                 });
 
             migrationBuilder.CreateTable(
@@ -67,14 +61,24 @@ namespace Book_History_Backend.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.InsertData(
+                table: "Authors",
+                columns: new[] { "AuthorId", "AuthorName" },
+                values: new object[] { 1, "Shakespeare" });
+
+            migrationBuilder.InsertData(
+                table: "Authors",
+                columns: new[] { "AuthorId", "AuthorName" },
+                values: new object[] { 2, "Dante Alligeri" });
+
+            migrationBuilder.InsertData(
+                table: "Authors",
+                columns: new[] { "AuthorId", "AuthorName" },
+                values: new object[] { 3, "Frojd" });
+
             migrationBuilder.CreateIndex(
                 name: "IX_AuthorBooks_AuthorId",
                 table: "AuthorBooks",
-                column: "AuthorId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Books_AuthorId",
-                table: "Books",
                 column: "AuthorId");
         }
 
@@ -84,10 +88,10 @@ namespace Book_History_Backend.Migrations
                 name: "AuthorBooks");
 
             migrationBuilder.DropTable(
-                name: "Books");
+                name: "Authors");
 
             migrationBuilder.DropTable(
-                name: "Authors");
+                name: "Books");
         }
     }
 }

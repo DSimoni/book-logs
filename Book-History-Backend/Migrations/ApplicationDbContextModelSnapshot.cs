@@ -37,6 +37,23 @@ namespace Book_History_Backend.Migrations
                     b.HasKey("AuthorId");
 
                     b.ToTable("Authors");
+
+                    b.HasData(
+                        new
+                        {
+                            AuthorId = 1,
+                            AuthorName = "Shakespeare"
+                        },
+                        new
+                        {
+                            AuthorId = 2,
+                            AuthorName = "Dante Alligeri"
+                        },
+                        new
+                        {
+                            AuthorId = 3,
+                            AuthorName = "Frojd"
+                        });
                 });
 
             modelBuilder.Entity("Book_History_Backend.Data.Models.AuthorBook", b =>
@@ -62,9 +79,6 @@ namespace Book_History_Backend.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int?>("AuthorId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -77,8 +91,6 @@ namespace Book_History_Backend.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("AuthorId");
 
                     b.ToTable("Books");
                 });
@@ -102,18 +114,9 @@ namespace Book_History_Backend.Migrations
                     b.Navigation("Book");
                 });
 
-            modelBuilder.Entity("Book_History_Backend.Data.Models.Book", b =>
-                {
-                    b.HasOne("Book_History_Backend.Data.Models.Author", null)
-                        .WithMany("Books")
-                        .HasForeignKey("AuthorId");
-                });
-
             modelBuilder.Entity("Book_History_Backend.Data.Models.Author", b =>
                 {
                     b.Navigation("AuthorBooks");
-
-                    b.Navigation("Books");
                 });
 
             modelBuilder.Entity("Book_History_Backend.Data.Models.Book", b =>

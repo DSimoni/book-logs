@@ -25,6 +25,10 @@ namespace Book_History_Backend.Data
                 .HasOne(bc => bc.Author)
                 .WithMany(c => c.AuthorBooks)
                 .HasForeignKey(bc => bc.AuthorId);
+
+            modelBuilder.Seed();
         }
+
+
     }
 }

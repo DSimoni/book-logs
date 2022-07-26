@@ -102,6 +102,10 @@ export class BookDetailsComponent implements OnInit {
       (response) => {
         console.log(response);
         this.message = 'The book was updated successfully!';
+
+        setTimeout(() => {
+          this.router.navigate(['/book']);
+        }, 2000);
       },
       (error) => {
         console.log(error);

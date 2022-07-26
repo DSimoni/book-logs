@@ -1,0 +1,37 @@
+2022-07-26 23:00:34.601 +02:00 [INF] Now listening on: https://localhost:7180
+2022-07-26 23:00:34.703 +02:00 [INF] Now listening on: http://localhost:5180
+2022-07-26 23:00:34.709 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-26 23:00:34.709 +02:00 [INF] Hosting environment: Development
+2022-07-26 23:00:34.709 +02:00 [INF] Content root path: C:\Users\User\Documents\Linkedin Courses\Book-Logs-1\Book-History-Backend\
+2022-07-26 23:00:47.019 +02:00 [INF] The books loaded
+2022-07-26 23:00:51.980 +02:00 [INF] The authors loaded
+2022-07-26 23:00:52.666 +02:00 [INF] The books loaded
+2022-07-26 23:01:11.775 +02:00 [INF] The book test added with description 8679 and published date 26/07/2022 23:01:10
+2022-07-26 23:01:12.932 +02:00 [INF] The books loaded
+2022-07-26 23:01:29.567 +02:00 [INF] The authors loaded
+2022-07-26 23:01:30.143 +02:00 [INF] The book with id: 1026 has Test ,description fgdgfsdgdfg and published date 20/07/2022 21:51:32
+2022-07-26 23:01:36.536 +02:00 [INF] The book with title Test updated to Test 7
+2022-07-26 23:01:37.071 +02:00 [INF] The book with title Test 7 updated to Test 7
+2022-07-26 23:01:39.028 +02:00 [INF] The books loaded
+2022-07-26 23:25:46.493 +02:00 [INF] Now listening on: https://localhost:7180
+2022-07-26 23:25:46.580 +02:00 [INF] Now listening on: http://localhost:5180
+2022-07-26 23:25:46.587 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-26 23:25:46.587 +02:00 [INF] Hosting environment: Development
+2022-07-26 23:25:46.587 +02:00 [INF] Content root path: C:\Users\User\Documents\Linkedin Courses\Book-Logs-1\Book-History-Backend\
+2022-07-26 23:26:03.031 +02:00 [INF] The authors loaded
+2022-07-26 23:26:14.715 +02:00 [INF] The book Test 1 added with description sfsdfsdfsdfsdf and published date 26/07/2022 23:26:13
+2022-07-26 23:26:16.481 +02:00 [INF] The books loaded
+2022-07-26 23:26:19.013 +02:00 [INF] The authors loaded
+2022-07-26 23:26:19.404 +02:00 [INF] The book with id: 1 has Test 1 ,description sfsdfsdfsdfsdf and published date 26/07/2022 23:26:13
+2022-07-26 23:26:28.640 +02:00 [INF] The book with title Test 1 updated to Test 5
+2022-07-26 23:27:22.502 +02:00 [INF] The books loaded
+2022-07-26 23:27:27.621 +02:00 [INF] The books were sorted
+2022-07-26 23:28:02.331 +02:00 [INF] The books loaded
+2022-07-26 23:30:43.858 +02:00 [INF] The books loaded
+2022-07-26 23:31:32.543 +02:00 [INF] The books loaded
+2022-07-26 23:31:37.809 +02:00 [INF] The books loaded
+2022-07-26 23:31:40.131 +02:00 [INF] The authors loaded
+2022-07-26 23:31:40.158 +02:00 [INF] The book with id: 1 has Test 5 ,description sfsdfsdfsdfsdf and published date 26/07/2022 23:26:13
+2022-07-26 23:31:43.896 +02:00 [INF] The book with title Test 5 updated to Test 5
+2022-07-26 23:31:46.939 +02:00 [INF] The books loaded
+2022-07-26 23:31:56.378 +02:00 [INF] The books loaded
